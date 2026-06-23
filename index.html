@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ullash Podder — Senior Mobile Engineer & Technical Consultant</title>
-<meta name="description" content="Senior Software Engineer with 10+ years building iOS, Android, and Flutter products. Available for senior engineering, technical lead, and IT consultancy roles in the UK.">
-<meta name="keywords" content="Senior Software Engineer, Mobile Engineer, iOS, Android, Flutter, Swift, Kotlin, IT Consultant, Technical Lead, UK, Sponsor, Skilled Worker">
+<meta name="description" content="Senior Software Engineer with 10+ years building iOS, Android, and Flutter products. Builder of Debrief Notes, an on-device AI voice notes app. Available for senior engineering, technical lead, and IT consultancy roles in the UK.">
+<meta name="keywords" content="Senior Software Engineer, Mobile Engineer, iOS, Android, Flutter, Swift, SwiftUI, Kotlin, On-device AI, IT Consultant, Technical Lead, UK, Sponsor, Skilled Worker">
 <meta property="og:title" content="Ullash Podder — Senior Mobile Engineer">
-<meta property="og:description" content="10+ years shipping iOS, Android, and Flutter products. UK-based.">
+<meta property="og:description" content="10+ years shipping iOS, Android, and Flutter products. Building on-device AI. UK-based.">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
 <script src="https://cdn.tailwindcss.com"></script>
@@ -15,6 +15,8 @@
   body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
   .glow { box-shadow: 0 0 40px rgba(59, 130, 246, 0.15); }
   .gradient-text { background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .icon-tile { width: 56px; height: 56px; border-radius: 14px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-weight: 700; overflow: hidden; }
+  .icon-tile img { width: 100%; height: 100%; object-fit: cover; }
 </style>
 </head>
 <body class="bg-slate-950 text-slate-100 antialiased">
@@ -49,18 +51,62 @@
 
   <div class="space-y-6">
 
-    <!-- FitSuite -->
-    <article class="bg-slate-900/50 border border-slate-800 rounded-2xl p-8 glow hover:border-slate-700 transition">
-      <div class="flex flex-wrap items-baseline justify-between gap-2 mb-3">
-        <h3 class="text-2xl font-bold">FitSuite — White-Label Fitness Platform</h3>
-        <span class="text-sm text-slate-400">2024 — Present</span>
+    <!-- Debrief Notes (featured / self-initiated) -->
+    <article class="bg-slate-900/50 border border-blue-500/30 rounded-2xl p-8 glow hover:border-blue-500/50 transition">
+      <div class="flex items-start gap-4 mb-3">
+        <div class="icon-tile"><img src="assets/debrief.png" alt="Debrief Notes logo"></div>
+        <div class="flex-1">
+          <div class="flex flex-wrap items-baseline justify-between gap-2">
+            <h3 class="text-2xl font-bold">Debrief Notes — On-Device AI Voice Notes</h3>
+            <span class="text-sm text-slate-400">2025 — In review</span>
+          </div>
+          <div class="flex flex-wrap items-center gap-2 mt-2">
+            <span class="text-xs px-2.5 py-1 bg-blue-500/15 text-blue-300 rounded-full border border-blue-500/30">Self-initiated</span>
+            <span class="text-blue-400 text-sm">iOS · SwiftUI · Private by design</span>
+          </div>
+        </div>
       </div>
-      <p class="text-blue-400 text-sm mb-4">Senior Mobile Engineer & Tech Consultant · Fitness Business Profits (UK)</p>
+      <p class="text-slate-300 mb-4 leading-relaxed">
+        A local-first iOS app that records, transcribes, and summarises voice notes <strong>entirely on the device</strong> — no servers, no account, no cloud. Speech recognition and LLM summarisation both run offline. I extracted the AI layer into a reusable, open-source Swift package.
+      </p>
+      <ul class="space-y-2 text-slate-300 mb-4">
+        <li class="flex gap-2"><span class="text-emerald-400">→</span> <strong>Fully on-device</strong>: recordings, transcripts, and summaries never leave the phone</li>
+        <li class="flex gap-2"><span class="text-emerald-400">→</span> On-device ASR (Apple SpeechAnalyzer + WhisperKit fallback) and <strong>Llama 3.2 3B</strong> summarisation via MLX-Swift</li>
+        <li class="flex gap-2"><span class="text-emerald-400">→</span> Open-sourced the AI service layer as a <strong>MIT-licensed Swift package</strong> (AIServiceKit)</li>
+        <li class="flex gap-2"><span class="text-emerald-400">→</span> Built on <strong>Swift 6 strict concurrency</strong>, SwiftUI, and SwiftData, iOS 18+</li>
+      </ul>
+      <div class="flex flex-wrap gap-2 mb-5">
+        <span class="text-xs px-2.5 py-1 bg-slate-800 rounded-full text-slate-300">SwiftUI</span>
+        <span class="text-xs px-2.5 py-1 bg-slate-800 rounded-full text-slate-300">SwiftData</span>
+        <span class="text-xs px-2.5 py-1 bg-slate-800 rounded-full text-slate-300">Swift 6</span>
+        <span class="text-xs px-2.5 py-1 bg-slate-800 rounded-full text-slate-300">MLX</span>
+        <span class="text-xs px-2.5 py-1 bg-slate-800 rounded-full text-slate-300">WhisperKit</span>
+        <span class="text-xs px-2.5 py-1 bg-slate-800 rounded-full text-slate-300">On-device AI</span>
+      </div>
+      <div class="flex flex-wrap gap-3">
+        <a href="[PASTE_APP_STORE_OR_TESTFLIGHT_LINK]" target="_blank" rel="noopener" class="bg-blue-600 hover:bg-blue-500 transition px-4 py-2 rounded-lg font-medium text-sm">View on App Store</a>
+        <a href="https://github.com/UllashPodder/ai-service-kit" target="_blank" rel="noopener" class="border border-slate-700 hover:border-slate-500 transition px-4 py-2 rounded-lg font-medium text-sm">Open-source: AIServiceKit</a>
+        <a href="/debrief/privacy" class="border border-slate-700 hover:border-slate-500 transition px-4 py-2 rounded-lg font-medium text-sm">Privacy</a>
+      </div>
+    </article>
+
+    <!-- FitSuite -->
+    <article class="bg-slate-900/50 border border-slate-800 rounded-2xl p-8 hover:border-slate-700 transition">
+      <div class="flex items-start gap-4 mb-3">
+        <div class="icon-tile"><img src="assets/fitsuite.png" alt="FitSuite logo"></div>
+        <div class="flex-1">
+          <div class="flex flex-wrap items-baseline justify-between gap-2">
+            <h3 class="text-2xl font-bold">FitSuite — White-Label Fitness Platform</h3>
+            <span class="text-sm text-slate-400">2024 — Present</span>
+          </div>
+          <p class="text-blue-400 text-sm mt-2">Senior Mobile Engineer & Tech Consultant · Fitness Business Profits (UK)</p>
+        </div>
+      </div>
       <p class="text-slate-300 mb-4 leading-relaxed">
         Evolved an MVP into a scalable white-label platform competing with MindBody and LegitFit. Owned the shared codebase that generates self-branded apps for each gym client.
       </p>
       <ul class="space-y-2 text-slate-300 mb-4">
-        <li class="flex gap-2"><span class="text-emerald-400">→</span> Serving <strong>15+ live gyms</strong> with full membership and booking</li>
+        <li class="flex gap-2"><span class="text-emerald-400">→</span> Serving <strong>10+ live gyms</strong> with full membership and booking</li>
         <li class="flex gap-2"><span class="text-emerald-400">→</span> Backend on Firebase + Google Cloud running <strong>under £20/month</strong> total infra cost</li>
         <li class="flex gap-2"><span class="text-emerald-400">→</span> Redesigned payment flows with <strong>Stripe Connect</strong>, added platform fee model</li>
         <li class="flex gap-2"><span class="text-emerald-400">→</span> Led junior developer and QA testers to hit V2 launch targets</li>
@@ -76,16 +122,21 @@
 
     <!-- RideFlag -->
     <article class="bg-slate-900/50 border border-slate-800 rounded-2xl p-8 hover:border-slate-700 transition">
-      <div class="flex flex-wrap items-baseline justify-between gap-2 mb-3">
-        <h3 class="text-2xl font-bold">RideFlag — US Rideshare Platform</h3>
-        <span class="text-sm text-slate-400">2013 — 2021</span>
+      <div class="flex items-start gap-4 mb-3">
+        <div class="icon-tile"><img src="assets/rideflag.png" alt="RideFlag logo"></div>
+        <div class="flex-1">
+          <div class="flex flex-wrap items-baseline justify-between gap-2">
+            <h3 class="text-2xl font-bold">RideFlag — US Rideshare Platform</h3>
+            <span class="text-sm text-slate-400">2013 — 2021</span>
+          </div>
+          <p class="text-blue-400 text-sm mt-2">Senior Engineer → Program Manager · Ergo Ventures</p>
+        </div>
       </div>
-      <p class="text-blue-400 text-sm mb-4">Senior Engineer → Program Manager · Ergo Ventures</p>
       <p class="text-slate-300 mb-4 leading-relaxed">
         Built the initial iOS MVP from scratch first in Objective-C, then converted to Swift. Later owned the technical roadmap and user journeys as Program Manager for the US-based client.
       </p>
       <ul class="space-y-2 text-slate-300 mb-4">
-        <li class="flex gap-2"><span class="text-emerald-400">→</span> <strong>~65% increase</strong> in user retention via optimised onboarding</li>
+        <li class="flex gap-2"><span class="text-emerald-400">→</span> <strong>~15% increase</strong> in user retention via optimised onboarding</li>
         <li class="flex gap-2"><span class="text-emerald-400">→</span> Established core navigation and data architecture for high-concurrency users</li>
         <li class="flex gap-2"><span class="text-emerald-400">→</span> Primary technical liaison with US stakeholders for 5+ years</li>
       </ul>
@@ -100,11 +151,16 @@
 
     <!-- GatewayToAccess -->
     <article class="bg-slate-900/50 border border-slate-800 rounded-2xl p-8 hover:border-slate-700 transition">
-      <div class="flex flex-wrap items-baseline justify-between gap-2 mb-3">
-        <h3 class="text-2xl font-bold">GatewayToAccess — Accessibility & Messaging</h3>
-        <span class="text-sm text-slate-400">2021 — 2023</span>
+      <div class="flex items-start gap-4 mb-3">
+        <div class="icon-tile" style="background: linear-gradient(135deg, #0f766e 0%, #115e59 100%); color: #5eead4;">G</div>
+        <div class="flex-1">
+          <div class="flex flex-wrap items-baseline justify-between gap-2">
+            <h3 class="text-2xl font-bold">GatewayToAccess — Accessibility & Messaging</h3>
+            <span class="text-sm text-slate-400">2021 — 2023</span>
+          </div>
+          <p class="text-blue-400 text-sm mt-2">Senior Software Engineer · Kaz Software</p>
+        </div>
       </div>
-      <p class="text-blue-400 text-sm mb-4">Senior Software Engineer · Kaz Software</p>
       <p class="text-slate-300 mb-4 leading-relaxed">
         Delivered major feature upgrades across iOS and Android for an accessibility-focused communications product.
       </p>
@@ -123,11 +179,16 @@
 
     <!-- United Healthcare -->
     <article class="bg-slate-900/50 border border-slate-800 rounded-2xl p-8 hover:border-slate-700 transition">
-      <div class="flex flex-wrap items-baseline justify-between gap-2 mb-3">
-        <h3 class="text-2xl font-bold">United Healthcare iOS App</h3>
-        <span class="text-sm text-slate-400">2016 — 2021</span>
+      <div class="flex items-start gap-4 mb-3">
+        <div class="icon-tile" style="background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%); color: #bfdbfe;">UH</div>
+        <div class="flex-1">
+          <div class="flex flex-wrap items-baseline justify-between gap-2">
+            <h3 class="text-2xl font-bold">United Healthcare iOS App</h3>
+            <span class="text-sm text-slate-400">2016 — 2021</span>
+          </div>
+          <p class="text-blue-400 text-sm mt-2">Program Manager · Ergo Ventures</p>
+        </div>
       </div>
-      <p class="text-blue-400 text-sm mb-4">Program Manager · Ergo Ventures</p>
       <p class="text-slate-300 mb-4 leading-relaxed">
         Coordinated cross-functional teams to ship a healthcare iOS app for a US client under aggressive timelines.
       </p>
@@ -171,13 +232,13 @@
       </ul>
     </div>
     <div>
-      <h3 class="font-semibold text-slate-200 mb-3">Leadership</h3>
+      <h3 class="font-semibold text-slate-200 mb-3">On-device AI</h3>
       <ul class="space-y-1.5 text-slate-400 text-sm">
-        <li>Technical leadership</li>
-        <li>Stakeholder management</li>
-        <li>Mentoring & code review</li>
-        <li>Product delivery lifecycle</li>
-        <li>Requirements & system design</li>
+        <li>MLX-Swift · Llama 3.2</li>
+        <li>WhisperKit · SpeechAnalyzer</li>
+        <li>Swift 6 strict concurrency</li>
+        <li>SwiftData</li>
+        <li>Swift Package design (SPM)</li>
       </ul>
     </div>
   </div>
@@ -191,7 +252,7 @@
       I design, build, and scale mobile and cloud-backed applications. Over a decade, I've taken products from idea to production across rideshare, healthcare, fitness, and accessibility domains — for clients in the US, UK, and Bangladesh.
     </p>
     <p>
-      I'm strongest where engineering meets product: turning vague business requirements into shipped systems, modernising legacy codebases, and getting small teams to deliver fast without cutting corners on architecture.
+      I'm strongest where engineering meets product: turning vague business requirements into shipped systems, modernising legacy codebases, and getting small teams to deliver fast without cutting corners on architecture. Lately I've been building on-device AI on Apple platforms — running speech recognition and LLM summarisation fully offline.
     </p>
     <p>
       Outside work, I volunteer as a Tech Tutor with LifeLines in Brighton and Hove, helping adults build digital skills.
